@@ -1,6 +1,6 @@
 const express = require('express');
 const passport = require('passport');
-const cookiePArser = requiere('cookie-parser');
+const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
 const app = express();
@@ -12,7 +12,7 @@ app.use(cookieParser('codigoSecreto'));
 app.use(session({
 	secret: 'codigoSecreto',
 	resave: true,
-	saveUnitialized: true
+	saveUninitialized: true
 }));
 
 app.use(passport.initialize());
