@@ -35,7 +35,11 @@ passport.deserializeUser(function(id,done){
 
 app.set('view engine', 'ejs');
 
-app.get("/",(req,res) =>{
+app.get("/", (req,res,next)=>{
+	if(req.isAuthenticated()) return next();
+	
+	res.redirect("/login");
+},(req,res) =>{
 
 	res.send("Hola");
 
