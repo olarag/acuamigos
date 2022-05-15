@@ -37,6 +37,8 @@ app.set('view engine', 'ejs');
 
 app.get("/",(req,res) =>{
 
+	app.send("Hola");
+
 });
 
 app.get("/login", (req,res) =>{
