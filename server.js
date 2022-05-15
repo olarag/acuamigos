@@ -20,7 +20,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(new PassportLocal(function(username,password,done){
-	if(username === "acuamigos" && password === "123456")			return done(null,{ id: 1, name: "Cody" });	
+	if(username === "acuamigo" && password === "1234")			return done(null,{ id: 1, name: "Cody" });	
 	
 	done(null, false);
 }));
@@ -37,7 +37,7 @@ app.set('view engine', 'ejs');
 
 app.get("/",(req,res) =>{
 
-	app.send("Hola");
+	res.send("Hola");
 
 });
 
