@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/olarag/acuamigos#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "express-session": "^1.17.3",
     "passport": "^0.5.2",
     "sxpress": "^1.0.3"
   }
